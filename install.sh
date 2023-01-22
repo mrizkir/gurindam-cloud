@@ -18,3 +18,4 @@ mkdir -p /etc/kolla
 cp -r  /path/to/venv/share/kolla-ansible/etc_examples/kolla/* /etc/kolla
 cp /path/to/venv/share/kolla-ansible/ansible/inventory/all-in-one /etc/kolla
 
+kolla-ansible install-deps
