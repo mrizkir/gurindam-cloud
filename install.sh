@@ -2,7 +2,7 @@
 
 apt update && apt upgrade -y && apt dist-upgrade -y
 
-apt install python3-venv git python3-dev libffi-dev gcc libssl-dev python3-docker -y
+apt install python3-venv git python3-dev libffi-dev gcc libssl-dev python3-docker mc net-tools -y
 
 python3 -m venv /path/to/venv
 source /path/to/venv/bin/activate
