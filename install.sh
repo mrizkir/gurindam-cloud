@@ -19,3 +19,11 @@ cp -r  /path/to/venv/share/kolla-ansible/etc_examples/kolla/* /etc/kolla
 cp /path/to/venv/share/kolla-ansible/ansible/inventory/all-in-one /etc/kolla
 
 kolla-ansible install-deps
+
+source /path/to/venv/bin/activate && cd /etc/kolla && kolla-genpwd
+
+# kolla-ansible -i ./all-in-one bootstrap-servers
+# kolla-ansible -i ./all-in-one prechecks
+# kolla-ansible -i ./all-in-one deploy
+# pip install python-openstackclient
+# kolla-ansible post-deploy
