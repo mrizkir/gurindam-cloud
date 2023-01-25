@@ -162,7 +162,7 @@ neutron_external_interface: "enp6s0"
 # if vmware_nsxv3 or vmware_nsxp is selected, enable_openvswitch MUST be set to "no" (default is yes)
 # Do note linuxbridge is *EXPERIMENTAL* in Neutron since Zed and it requires extra tweaks to config to be usable.
 # For details, see: https://docs.openstack.org/neutron/latest/admin/config-experimental-framework.html
-#neutron_plugin_agent: "openvswitch"
+neutron_plugin_agent: "ovn"
 
 # Valid options are [ internal, infoblox ]
 #neutron_ipam_driver: "internal"
@@ -383,6 +383,7 @@ neutron_external_interface: "enp6s0"
 #enable_neutron_agent_ha: "no"
 #enable_neutron_bgp_dragent: "no"
 #enable_neutron_provider_networks: "no"
+enable_neutron_provider_networks: "yes"
 #enable_neutron_segments: "no"
 #enable_neutron_sfc: "no"
 #enable_neutron_trunk: "no"
@@ -593,6 +594,7 @@ neutron_external_interface: "enp6s0"
 ##############################
 # Enable distributed floating ip for OVN deployments
 #neutron_ovn_distributed_fip: "no"
+neutron_ovn_distributed_fip: "yes"
 
 # Enable DHCP agent(s) to use with OVN
 #neutron_ovn_dhcp_agent: "no"
@@ -863,3 +865,10 @@ neutron_external_interface: "enp6s0"
 
 # this is UDP port
 #hacluster_corosync_port: 5405
+
+####################
+# Mounting folder di host ke docker
+####################
+#default_extra_volumes:
+#  - "/data: /data"
+#openstact_cacert: "/data/root.crt"
