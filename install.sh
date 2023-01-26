@@ -1,4 +1,4 @@
-!#/bin/bash
+!#/usr/bin/bash
 
 apt update && apt upgrade -y && apt dist-upgrade -y
 
@@ -22,8 +22,10 @@ kolla-ansible install-deps
 
 source /path/to/venv/bin/activate && cd /etc/kolla && kolla-genpwd
 
-# kolla-ansible -i ./all-in-one bootstrap-servers
-# kolla-ansible -i ./all-in-one prechecks
-# kolla-ansible -i ./all-in-one deploy
-# pip install python-openstackclient
-# kolla-ansible post-deploy
+cd /home/customer/gurindam-cloud
+
+cd /home/customer/gurindam-cloud && kolla-ansible -i ./all-in-one bootstrap-servers
+cd /home/customer/gurindam-cloud && kolla-ansible -i ./all-in-one prechecks
+cd /home/customer/gurindam-cloud && kolla-ansible -i ./all-in-one deploy
+pip install python-openstackclient
+kolla-ansible post-deploy
