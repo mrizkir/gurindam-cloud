@@ -1,4 +1,4 @@
-!#/bin/sh
+!#/usr/bin/sh
 
 mkfs.ext4 /dev/sdb1
 mv /var /var.old
