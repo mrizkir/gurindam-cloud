@@ -24,8 +24,8 @@ source /path/to/venv/bin/activate && cd /etc/kolla && kolla-genpwd
 
 cd /home/customer/gurindam-cloud && cp -R globals.yml /etc/kolla
 
-cd /home/customer/gurindam-cloud && kolla-ansible -i ./all-in-one bootstrap-servers
-cd /home/customer/gurindam-cloud && kolla-ansible -i ./all-in-one prechecks
-cd /home/customer/gurindam-cloud && kolla-ansible -i ./all-in-one deploy
+cd /etc/kolla && kolla-ansible -i ./all-in-one bootstrap-servers
+cd /etc/kolla && kolla-ansible -i ./all-in-one prechecks
+cd /etc/kolla && kolla-ansible -i ./all-in-one deploy
 source /path/to/venv/bin/activate && pip install python-openstackclient
 source /path/to/venv/bin/activate && kolla-ansible post-deploy
