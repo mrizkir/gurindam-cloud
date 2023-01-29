@@ -1,5 +1,6 @@
 !#/usr/bin/sh
 
+git clone https://github.com/mrizkir/gurindam-cloud.git
 mkfs.ext4 /dev/sdb1
 mv /var /var.old
 mkdir /var
