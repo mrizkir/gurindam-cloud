@@ -8,3 +8,4 @@ rsync -av /var.old/ /var/
 echo "/dev/sdb1 /var ext4 defaults 0 1" >> /etc/fstab
 cp -R hosts /etc/
 cp -R hostname /etc/
+rm -rf /var.old
